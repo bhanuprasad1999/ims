@@ -1,0 +1,7 @@
+db.sqlite3
+
+venv
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
