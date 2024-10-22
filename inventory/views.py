@@ -4,7 +4,8 @@ from django.http import JsonResponse
 from django.forms.models import model_to_dict
 from django.core.cache import cache
 
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 
 from inventory.models import InventoryModel
 
@@ -15,6 +16,7 @@ def ping(request):
 
 
 @api_view(['POST'])
+@permission_classes([IsAuthenticated])
 def create_item(request):
     try:
         data = json.loads(request.body)
@@ -26,6 +28,7 @@ def create_item(request):
 
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def read_all_items(request):
     data = list(InventoryModel.objects.values())
     if len(data) == 0:
@@ -34,6 +37,7 @@ def read_all_items(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated])
 def manipulation_on_item(request):
     try:
         item_id = request.GET.get('item_id')
