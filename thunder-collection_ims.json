@@ -1,0 +1,140 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "ims",
+    "collectionId": "8ae448b1-ddef-479c-bc97-b9204b27cc00",
+    "dateExported": "2024-10-23T01:41:15.688Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "bca1540d-5f73-4cb8-8d60-aafd04cce26c",
+            "colId": "8ae448b1-ddef-479c-bc97-b9204b27cc00",
+            "containerId": "",
+            "name": "create item",
+            "url": "localhost:8000/item/create",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-10-22T13:45:30.853Z",
+            "modified": "2024-10-22T15:07:32.966Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"item_name\": \"Laptop 22\",\n    \"description\": \"A high-performance laptop\",\n    \"quantity\": 10,\n    \"unit\": \"units\",\n    \"price\": 1200\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "db5a393d-3566-4e64-9088-24e4f1a0eeb0",
+            "colId": "8ae448b1-ddef-479c-bc97-b9204b27cc00",
+            "containerId": "",
+            "name": "delete item",
+            "url": "localhost:8000/items/get_item?item_id=7",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-10-22T13:45:41.075Z",
+            "modified": "2024-10-22T14:44:23.062Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "item_id",
+                    "value": "7",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "2061f41f-daed-435d-8034-35575ba5fb6f",
+            "colId": "8ae448b1-ddef-479c-bc97-b9204b27cc00",
+            "containerId": "",
+            "name": "update item",
+            "url": "localhost:8000/items/get_item?item_id=7",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-10-22T13:45:48.736Z",
+            "modified": "2024-10-22T16:08:37.686Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "item_id",
+                    "value": "7",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"item_name\":\"mouse 1\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "fa723edf-b050-41de-a387-78cbf82078ff",
+            "colId": "8ae448b1-ddef-479c-bc97-b9204b27cc00",
+            "containerId": "",
+            "name": "list item",
+            "url": "localhost:8000/items",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-10-22T13:45:54.317Z",
+            "modified": "2024-10-22T16:52:58.934Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NjE2MDYxLCJpYXQiOjE3Mjk2MTU3NjEsImp0aSI6ImEwZjcxZWM2NGJjMDRkOGNiZGQzMWYzYTcwMTJjMmZlIiwidXNlcl9pZCI6MX0.ApwnLWvWx87pWkKN54D6nFlv7X8Am7qrjyaHbn-D-Wo"
+            }
+        },
+        {
+            "_id": "b8de9540-6f5f-4b72-8b33-227c2fd23be0",
+            "colId": "8ae448b1-ddef-479c-bc97-b9204b27cc00",
+            "containerId": "",
+            "name": "Get item",
+            "url": "localhost:8000/items/get_item?item_id=7",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-10-22T14:03:23.383Z",
+            "modified": "2024-10-22T16:11:20.049Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "item_id",
+                    "value": "7",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "459c7093-c0b9-4739-ac3f-604ad7cf012c",
+            "colId": "8ae448b1-ddef-479c-bc97-b9204b27cc00",
+            "containerId": "",
+            "name": "Register User",
+            "url": "localhost:8000/user/register/",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-10-22T16:18:29.906Z",
+            "modified": "2024-10-22T16:42:15.053Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"ram\",\n  \"email\":\"ram123@mailinator.com\",\n  \"password\":\"ram199907\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "252cbbcf-70c9-447c-8707-3d559358e1fe",
+            "colId": "8ae448b1-ddef-479c-bc97-b9204b27cc00",
+            "containerId": "",
+            "name": "Login user",
+            "url": "localhost:8000/user/login/",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-10-22T16:18:37.737Z",
+            "modified": "2024-10-22T16:43:04.897Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"ram\",\n  \"password\":\"ram199907\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "nLypc8f8HuuAifTo-PXN7kptsGRUj1yk2caOqq9JFVWiuC3WDCauziVLDvO1EPKf9XTkHwECfDHZfGHmPEBfzw"
+}
